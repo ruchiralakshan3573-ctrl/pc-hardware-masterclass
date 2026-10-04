@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask From My AI - Ultimate PC Hardware Masterclass</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar / Menu Area -->
+        <div class="sidebar">
+            <div class="app-brand">
+                <i class="fa-solid fa-desktop"></i>
+                <span>PC Master Guide</span>
+            </div>
+
+            <!-- Profile Widget -->
+            <div class="user-profile-widget" id="userProfileWidget">
+                <label for="profileImgInput" class="profile-img-label" title="Click to change photo">
+                    <img id="userAvatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80" alt="Profile">
+                    <div id="goldenBadge" class="golden-badge hidden"><i class="fa-solid fa-award"></i></div>
+                </label>
+                <input type="file" id="profileImgInput" accept="image/*" style="display: none;">
+                
+                <div class="user-name-container">
+                    <span id="userNameDisplay">User</span>
+                    <i class="fa-solid fa-pen" id="editNameBtn" title="Edit Name" style="font-size: 11px; cursor: pointer; color: #38bdf8; margin-left: 6px;"></i>
+                </div>
+            </div>
+
+            <!-- Language Toggle (EN & Sinhala) -->
+            <div class="lang-toggle">
+                <button id="langEn" class="active">EN</button>
+                <button id="langSi">සිංහල</button>
+            </div>
+
+            <!-- Navigation Menu Items -->
+            <div class="menu-list" id="componentMenu"></div>
+        </div>
+
+        <!-- Main Display Content Area -->
+        <div class="main-content" id="contentDisplay"></div>
+    </div>
+
+    <!-- AI Chatbot Floating Button & Modal (Ask From My AI) -->
+    <button class="ai-toggle-btn" id="aiToggleBtn"><i class="fa-solid fa-robot"></i></button>
+    <div class="ai-chat-modal hidden" id="aiChatModal">
+        <div class="ai-chat-header">
+            <h3><i class="fa-solid fa-robot"></i> Ask From My AI</h3>
+            <span id="aiCloseBtn">&times;</span>
+        </div>
+        <div class="ai-chat-body" id="aiChatBody">
+            <div class="ai-message bot">Hello! Ask me anything about PC hardware, or type things like "show me ram image" or "cpu details"!</div>
+        </div>
+        <div class="ai-chat-footer">
+            <input type="text" id="aiUserInput" placeholder="Ask questions or request part images...">
+            <button id="aiSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
